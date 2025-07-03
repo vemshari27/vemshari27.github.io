@@ -1,141 +1,254 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+
 <head>
+  <!-- Google analytics tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRYQ3GG5Y8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-STGLQW4BJX');
 
-     <title>Srihari's Portfolio</title>
+    function toggleExcerpt(elementId) {
+      const excerptDiv = document.getElementById(elementId);
+      if (excerptDiv.style.display === "none") {
+        excerptDiv.style.display = "block";
+      } else {
+        excerptDiv.style.display = "none";
+      }
+    }
+  </script>
 
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="Tooplate">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <!-- <link rel="stylesheet" href="css/all.min.css">
-     <link rel="stylesheet" href="css/owl.carousel.min.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+  <!-- Title -->
+  <title>Srihari Vemuru</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1000">
 
-     <link rel="stylesheet" href="css/tooplate-ben-resume-style.css">
+  <!-- Isotope JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+  </style>
 </head>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+<body id="body">
+
+  <div id="main">
+    <div id="intro">
+      <div id="intro-text">
+        <h1>Srihari Vemuru</h1>
+        <p>
+          Hi! I am a PhD student in Mechanical Engineering at Iowa State University, advised by Dr. Sourabh Bhattacharya. 
+          My research focuses on multi-robot planning using reinforcement learning (RL) and robotic perception. 
+          I have hands-on experience working with UAVs, UGVs, and quadruped robots. My work integrates RL and computer vision 
+          into path planning frameworks to tackle game-theoretic challenges in multi-agent systems.
+          <br><br>
+          <!-- In PhD program:
+            Hi :wave: I am Liyiming Ke, 柯丽一鸣, or "Kay". I am a final-year grad student at University of Washington, advised by [Siddhartha Srinivasa](https://goodrobot.ai/). I research on Robotics :robot: Learning, with a focus on **Data-Driven Fine Manipulation**.
+            As a test-bed for pushing the limit of fine manipulation, I built [a chopsticks robot](https://goodcherrybot.github.io/) to showcase the _precision_ and _dynamic reactivity_ of systems trained via reinforcement learning. I have also developed theories like [f-divergence framework for imitation learning and adversarial imitation learning](https://arxiv.org/abs/1905.12888) and [leveraging local-continuity in dynamics](https://arxiv.org/pdf/2310.12972).
+            I was very fortunate to work with [Abhishek Gupta](https://homes.cs.washington.edu/~abhgupta/), [Tapomayukh Bhattacharjee](https://robotics.cornell.edu/faculty/tapomayukh-bhattacharjee-bio/), [Byron Boots](https://homes.cs.washington.edu/~bboots/) and [Sanjiban Choudary](https://sanjibanchoudhury.com/).
+          -->
+        <!-- <div id="more-bio" style="display: None">
+          <br>
+          <p>Liyiming Ke is a full stack robotist at Physical Intelligence researching on Machine Learning for Robot
+            Manipulation. She earned her Ph.D. from the University of Washington with her thesis titled "Data-driven
+            Fine Manipulation". She built a chopsticks-welding robot that demonstrate fine motor skills and developed
+            theoretical frameworks for robot learning. She has led human-robot interactive demonstration at AAAS in 2020
+            and has been selected as one of the Rising Stars in EECS 2023.</p>
+        </div> -->
+        <br>
+        <!-- <a href="javascript:toggle_bio()">Formal Bio</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
+        <a href="https://scholar.google.com/citations?user=qHaTOIoAAAAJ&hl=en">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/vemshari27">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/srihari-vemuru/">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <br><br>
+        vemshari@iastate.edu
+        <br><br>
+        </p>
+      </div>
+      <div id="intro-image">
+        <img src="images/profile.jpg">
+      </div>
+    </div>
 
 
-    <section class="about section-padding" id="about">
-        <div class="container">
-            <div class="row">
+    <div class="grid">
+      <!-- Publications -->
 
-                <div class="col-lg-6 col-md-6 col-12">
-                    <h3 class="mb-4">Srihari Vemuru</h3>
-
-                    <p>I am a final year CS student at International Institute of Information Technology Bangalore. I am interested in all branches of computer science, especially Computer Vision, Machine Learning and Computer Graphics. I am well versed with ML, algorithm design and software development.</p>
-
-                    <p>I am facinated by science, in general, and keen to learn new things. Apart from that, I play and follow football, and love video games.</p>
-
-                    <ul class="mt-4 mb-5 mb-lg-0 profile-list list-unstyled">
-                        <li><strong>Location :</strong> Bengaluru, India</li>
-
-                        <li><strong>Email :</strong> Vemuru.Srihari@iiitb.ac.in</li>
-
-                        <li><strong>GitHub :</strong> <a href="https://github.com/vemshari27">https://github.com/vemshari27</a></li>
-
-                        <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/srihari-vemuru-b72099183/">https://www.linkedin.com/in/srihari-vemuru-b72099183/</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-5 mx-auto col-md-6 col-12">
-                    <img src="images/photo.jpg" class="about-image img-fluid" alt="Srihari's Resume HTML Template">
-                </div>
-
-            </div>
-            </div>
-            </section>
-            <section>
-              <div class="container">
-            <div class="row about-second">
-            	<div class="col-lg-4 col-md-4 col-12">
-                <a href="files/CV_Srihari_Vemuru.pdf" class="custom-btn btn" download>CV</a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                  <a href="files/research_statement_Srihari_Vemuru.pdf" class="custom-btn btn" download>Research Statement</a>
-                </div>
-            </div>
+      <div class="list-item publication" data-category="publication">
+        <a class="thumbnail">
+          <video playsinline="" muted="" autoplay="" loop="" width="180px">
+            <source src="images/FUEL_submission.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="project-description">
+          <h3><a> Reinforcement Learning for UAV-UGV Multi-agent Planning</a></h3>
+          <p>
+            Reinforcement learning (RL) agents for delivery task execution, enabling adaptive decision-making in complex, partially observable environments. Algortithms
+            like SARSA, DQN, A2C and PPO are used to train agents for UAV-UGV multi-agent planning tasks.
+            The agents learn to navigate and collaborate in dynamic environments, enhancing their performance through continuous learning and adaptation.
+          </p>
         </div>
-    </section>
+      </div>
 
-    <section class="faq section-padding">
-        
-      <div class="container">
-          
-          <div class="row">
+      <div class="list-item publication" data-category="publication">
+        <a class="thumbnail">
+          <img src="images/showcase.png" alt="Showcase Thumbnail" width="180px">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4829514"> Localization-based Stationary Object Tracking in Precision Agriculture</a></h3>
+          <p>
+            Designed a novel object tracking system based on Simultaneous Localization and Mapping (SLAM), which significantly improved tracking performance in dynamic robotic scenarios. This model surpassed existing state-of-the-art trackers by 30.9%, making it a valuable tool for robots operating in cluttered and rapidly changing environments. The project advanced real-time perception capabilities in robotics by combining object tracking with spatial mapping.
+          </p>
+        </div>
+      </div>
 
-              <div class="col-lg-12 col-12">
+      <div class="list-item publication" data-category="publication">
+        <a class="thumbnail">
+          <video playsinline="" muted="" autoplay="" loop="" width="180px">
+            <source src="images/Final.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="project-description">
+          <h3><a> Multi-agent collaborative framework for agriculture</a></h3>
+          <p>
+            Autonomous framework to detect anomalies (e.g., pests, weeds, deficiency, etc.) in a plantation setting and intervene to resolve them using a group of UAVs and UGVs. Given the regions of interest in a farm, where robotic interventions are required (e.g., watering, spraying, harvesting), the goal is to plan optimal routes for the heterogenous team of UAVs and UGVs. Each agent has specialized tools, and the tasks must be optimally assigned and executed. Given that the farms are largely unstructured and dynamically changing (e.g., wind), an efficient real-time planner is required for enabling the team of UAVs and UGVs to accurately reach the locations of interest to perform operations like spraying and harvesting.
+          </p>
+        </div>
+      </div>
 
-                  <h3 class="mb-5">Experience</h3>
+      <div class="list-item publication" data-category="publication">
+        <a class="thumbnail">
+          <img src="images/brain3.png" alt="Showcase Thumbnail" width="180px">
+        </a>
+        <div class="project-description">
+          <h3><a> Medical AI: Sleep Apnea Detection Using Multimodal Learning</a></h3>
+          <p>
+            Built a classification model to diagnose obstructive sleep apnea by integrating head CT imaging data with patient health records. The multimodal learning approach achieved an impressive 95% accuracy in classification, offering a promising solution for early and accurate detection of sleep apnea. This project contributed to advancing biomedical AI, particularly in the domain of personalized healthcare.
+          </p>
+        </div>
+      </div>
 
-                  <div class="row about-third">
-                    <div class="col-lg-4 col-md-4 col-12">
-                      <h4>Internship at Polytechnique University, Montreal, Canada</h4>
-                      <p>Got selected for Mitacs Globalink Research Internship.</p><p>Worked on object detection and tracking for Autonomous Vehicles.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12">
-                      <h4>Internship at <a href="https://www.lightmetrics.co/">LightMetrics</a></h4>
-                      <p>LightMetrics is a start-up in video analytics for road and driver safety.</p><p>Worked on novel object detection models.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12">
-                      <h4>Internship at Indian Institute of Technology, Delhi</a></h4>
-                      <p>Selected for internship at the Quantum Computation Group in IIT Delhi at I-Hub Foundation for Cobotics (IHFC)</p>
-                    </div>
-                  </div>
+      <div class="list-item publication" data-category="publication">
+        <a class="thumbnail">
+          <img src="images/chest.png" alt="Showcase Thumbnail" width="180px">
+        </a>
+        <div class="project-description">
+          <h3><a> Chest Disease Recognition</a></h3>
+            <p>
+            Developed an AI system for comprehensive chest disease recognition from chest X-ray images. The model takes both the X-ray image and auxiliary patient information as input, and generates a detailed radiological report describing the findings. The architecture combines CNNs and DNNs to extract features, which are then fused using a feature combination network. An LSTM or Transformer-based model is used to generate the textual analysis. Additionally, the project explores advanced representation learning techniques to improve diagnostic accuracy and interpretability.
+          </p>
+        </div>
+      </div>
 
-            </div><!-- col -->
-        </div><!-- row -->
-      </div><!-- container -->
-  </section>
 
-    <section class="faq section-padding">
-        
-      <div class="container">
-          
-          <div class="row">
+    </div>
+    <div id="footer">
+      Website template by <a href="https://andyzeng.github.io/">Andy Zeng</a> and <a
+        href="https://jonbarron.info/">Jon's
+        website</a>.
+    </div>
 
-              <div class="col-lg-12 col-12">
+  </div>
 
-                  <h3 class="mb-5">Projects</h3>
+  <script>
 
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                      <a href="https://chalearnlap.cvc.uab.es/challenge/45/description/">Understanding Social Behavior in Dyadic and Small Group Interactions</a>
-                    </li>
-                    <li class="list-group-item">
-                      <a href="https://doi.org/10.36227/techrxiv.14845212.v1">Handling Complex Queries Using Query Trees</a>
-                    </li>
-                    <li class="list-group-item">
-                      Inferring Student Engagement Using Unsupervised Domain Adaptation
-                    </li>
-                    <li class="list-group-item">
-                      ASMCBot: A medical platform with a question answering Chatbot and hospital finding functionality
-                    </li>
-                    <li class="list-group-item">
-                      <a href="https://github.com/vemshari27/window-drop">WinDrop: A window sharing platform</a>
-                    </li>
-                    <li class="list-group-item">
-                      <a href="http://wsl.iiitb.ac.in/precision-learning-for-enterprise/">PLE Portal: Navigated learning platform</ul>
-                    </li>
-                  </ul>
+    // Isotope grid.
+    var $grid = $('.grid').isotope({
+      itemSelector: '.list-item',
+      layoutMode: 'fitRows',
+      transitionDuration: 0,
+      stagger: 10,
+      initLayout: false,
+      getSortData: {
+        name: '.name',
+        symbol: '.symbol',
+        number: '.number parseInt',
+        category: '[data-category]',
+        weight: function (itemElem) {
+          var weight = $(itemElem).find('.weight').text();
+          return parseFloat(weight.replace(/[\(\)]/g, ''));
+        }
+      }
+    });
 
-            </div><!-- col -->
-        </div><!-- row -->
-      </div><!-- container -->
-  </section>
+    // Bind filter button click.
+    $('#filters').on('click', 'button', function () {
+      var filterValue = $(this).attr('data-filter');
+      localStorage.setItem('filterValue', filterValue);
+      $grid.isotope({ filter: filterValue });
+    });
 
-     <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/custom.js"></script>
+    // Change is-checked class on buttons.
+    $('.button-group').each(function (i, buttonGroup) {
+      var $buttonGroup = $(buttonGroup);
+      $buttonGroup.on('click', 'button', function () {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $(this).addClass('is-checked');
+      });
+    });
 
+    function update_isotope() {
+      // Retrieve cached button click.
+      var defaultFilterValue = localStorage.getItem('filterValue');
+      if (defaultFilterValue == null) {
+        defaultFilterValue = ".highlight"
+      }
+      $grid.isotope({ filter: defaultFilterValue });
+      var buttons = document.getElementsByClassName("button");
+      for (var currButton of buttons) {
+        if (currButton.getAttribute('data-filter') == defaultFilterValue) {
+          currButton.classList.add('is-checked');
+        } else {
+          currButton.classList.remove('is-checked');
+        }
+      }
+    }
+
+    function toggle_bio() {
+      var x = document.getElementById("more-bio");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function toggle_highlights() {
+      var x = document.getElementById("main-highlights");
+      var y = document.getElementById("more-highlights");
+      var b = document.getElementById("toggle_highlights_button")
+      if (y.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "block";
+        b.innerHTML = "Show less"
+        update_isotope();
+      } else {
+        x.style.display = "block";
+        y.style.display = "none";
+        b.innerHTML = "Show more"
+        update_isotope();
+      }
+    }
+
+    update_isotope();
+
+  </script>
 </body>
+
 </html>
