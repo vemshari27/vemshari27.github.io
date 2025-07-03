@@ -207,7 +207,7 @@
       // Retrieve cached button click.
       var defaultFilterValue = localStorage.getItem('filterValue');
       if (defaultFilterValue == null) {
-        defaultFilterValue = ".highlight"
+        defaultFilterValue = ".publication"  // Changed from ".highlight" to ".publication"
       }
       $grid.isotope({ filter: defaultFilterValue });
       var buttons = document.getElementsByClassName("button");
