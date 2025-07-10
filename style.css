@@ -268,9 +268,12 @@ h2 {
 }
 
 .list-item {
+  clear: both; /* Add this to prevent overlap */
   width: 100%;
   line-height: 1em;
   margin-top: 1em;
+  padding-bottom: 1em; /* Add some bottom padding */
+  border-bottom: 1px solid #eee; /* Optional separator */
 }
 
 .list-item p.date {
@@ -333,7 +336,7 @@ h2 {
 
 .thumbnail {
   /*  width: 21%;*/
-  width: 18%;
+  width: 40%; /* Increased from 18% to 25% */
   float: left;
   margin-right: 2%;
 }
@@ -370,7 +373,8 @@ h3 a:hover {
 }
 
 .publication {
-  margin-bottom: 0.5em;
+  margin-bottom: 2em; /* Increased from 0.5em to 2em */
+  overflow: hidden; /* Clear floats */
 }
 
 .publication p {
@@ -378,9 +382,14 @@ h3 a:hover {
   line-height: 1.5em;
   color: #a0a8b0;
 }
+.publication::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .project-description {
-  width: 80%;
+  width: 50%; /* Decreased from 80% to 73% to accommodate larger thumbnail */
   float: left;
 }
 
